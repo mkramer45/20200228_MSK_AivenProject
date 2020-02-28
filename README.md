@@ -26,10 +26,10 @@ Additionally, once you have Python 3.7 running, you will need to install the fol
 To install these, open a terminal & enter the following commands:
 
 ```
-pip3 install bs4
-pip3 install Kafka
-pip3 install lxml
-pip3 install psycopg2
+>>pip3 install bs4
+>>pip3 install Kafka
+>>pip3 install lxml
+>>pip3 install psycopg2
 ```
 
 Lastly, you will need the SurfSender package itself. Simply download it from this github repository & save it to your disk.
