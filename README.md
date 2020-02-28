@@ -79,7 +79,7 @@ While remaining in the SurfSender package directory in your terminal, execute th
 >>python3 consumer_surf_info.py
 ```
 
-Upon executing this file, you should see the messages from the topic displayed in your terminal. Additionally, you are now able to query these messages in the SurfSender database table named 'surf_data' in PostgreSQL.
+Upon executing this file, you should see the messages from the topic displayed in your terminal. Additionally, you are now able to query these messages in the SurfSender database table named 'surf_conditions' in PostgreSQL.
 
 # Testing SurfSender
 
