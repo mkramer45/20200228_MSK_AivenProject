@@ -5,19 +5,23 @@ This is an application that provides the current wave heights of 6 popular beach
 # Requirements
 In order to get SurfSender up & running on your local environment, you will need the following:
 
---Python 3.7
+```
+--Python 3.7 
 --Apache Kafka
 --Apache Zookeeper
 --PostgreSQL
+```
 
 These items can be downloaded & installed from their respective websites. Just enter the above values in a search engine & you'll find a handful of links to choose from. It's always best to download directly from the distributor's website.
 
 Additionally, once you have Python 3.7 running, you will need to install the following 3rd party libraries.
 
+```
 --BeautifulSoup
 --Kafka
 --lxml
 --psycopg2
+```
 
 To install these, open a terminal & enter the following commands:
 
