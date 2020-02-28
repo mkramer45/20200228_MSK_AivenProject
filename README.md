@@ -1,5 +1,5 @@
 # SurfSender
-Application that provides the current wave heights of 6 popular beaches in New England. This app utilizes Python to gather the data from a list of URLs & then the data is sent as messages via Apache Kafka. Ultimately, the data is stored using an Aiven PostgreSQL database. This data can be used for building a web application or alerting mechanism to make surfers in the New England area aware of when there are big waves at their favorite beaches.
+This is an application that provides the current wave heights of 6 popular beaches in New England. This app utilizes Python to gather the data from a list of URLs & then the data is sent as messages top a topic hosted in an Aiven Kafka service. The messages are then processed by a consumer application & stored in an Aiven PostgreSQL database.
 
 
 # Requirements
@@ -8,6 +8,7 @@ In order to get SurfSender up & running on your local environment, you will need
 --Python 3.7
 --Apache Kafka
 --Apache Zookeeper
+--PostgreSQL
 
 These items can be downloaded & installed from their respective websites. Just enter the above values in a search engine & you'll find a handful of links to choose from. It's always best to download directly from the distributor's website.
 
@@ -79,7 +80,11 @@ While remaining in the SurfSender package directory in your terminal, execute th
 >>python3 consumer_surf_info.py
 ```
 
-Upon executing this file, you should see the messages from the topic displayed in your terminal. Additionally, you are now able to query these messages in the surf_db database table named 'surf_conditions' in PostgreSQL.
+Upon executing this file, you should see the messages from the topic displayed in your terminal. Additionally, you are now able to query these messages in the surf_db database table named 'surf_conditions' in PostgreSQL. For querying the data, I recommend using a GUI like pgadmin, otherwise you can also use the psql command line arguments as well. All of the required database connection info such as host, port, database name, table name, username + pw are stored in our consumer file. Once connected, you can see the messages by running the following query:
+
+```
+SELECT * FROM surf_conditions;
+```
 
 # Testing SurfSender
 
